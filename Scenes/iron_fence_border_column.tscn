@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://bj813ocriw1mn"]
+
+[ext_resource type="PackedScene" uid="uid://dj0imwb81h56v" path="res://Models/kenney_graveyard-kit/Models/GLB format/iron-fence-border-column.glb" id="1_mndpg"]
+[ext_resource type="Material" uid="uid://dch2hloj0uyxm" path="res://Materials/DARK GREEN.tres" id="2_qlltg"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_wtgt6"]
+points = PackedVector3Array(0.5, 0.8239, -0.40001, 0.5, -2.9092e-14, -0.40001, 0.5, 0.8239, -0.5, 0.399961, 0.8239, -0.40001, 0.399961, 0.0699218, -0.4, 0.5, -2.9092e-14, -0.5, 0.399961, -2.9092e-14, -0.4, 0.399961, 0.8239, -0.5, -0.437549, 0.8239, -0.45001, -0.460063, 0.753898, -0.427506, -0.5, 0.0699218, -0.4, -0.5, -2.9092e-14, -0.5, -0.5, -2.9092e-14, -0.4, -0.5, 0.0699218, -0.5, -0.460063, 0.753898, -0.472504, -0.5, 0.623893, -0.442502, -0.5, 0.623893, -0.457508)
+
+[node name="iron-fence-border-column2" instance=ExtResource("1_mndpg")]
+
+[node name="iron-fence-border-column" parent="." index="0"]
+transform = Transform3D(2.2, 0, 0, 0, 2.2, 0, 0, 0, 2.2, 0, 0, 0)
+surface_material_override/0 = ExtResource("2_qlltg")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="iron-fence-border-column" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="iron-fence-border-column/StaticBody3D" index="0"]
+shape = SubResource("ConvexPolygonShape3D_wtgt6")

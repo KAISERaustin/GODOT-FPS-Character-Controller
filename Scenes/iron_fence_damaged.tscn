@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://csaldk5466be"]
+
+[ext_resource type="PackedScene" uid="uid://chfngd7xh7313" path="res://Models/kenney_graveyard-kit/Models/GLB format/iron-fence-damaged.glb" id="1_lfp7i"]
+[ext_resource type="Material" uid="uid://dch2hloj0uyxm" path="res://Materials/DARK GREEN.tres" id="2_1wgdi"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_gyovx"]
+points = PackedVector3Array(-0.233359, 0.842984, -0.450004, -0.251762, 0.771744, -0.4275, -0.206832, 0.774303, -0.4275, 0.437451, 0.823832, -0.450004, -0.206832, 0.774303, -0.4725, -0.251762, 0.771744, -0.4725, -0.460063, 0.753831, -0.4725, -0.437549, 0.823832, -0.450004, -0.460063, 0.753831, -0.4275, 0.459965, 0.753831, -0.4275, 0.459965, 0.753831, -0.4725, -0.365211, 0.748878, -0.4725, -0.452525, -8.66653e-05, -0.465003, -0.5, 0.089974, -0.457501, -0.5, 0.623817, -0.457501, -0.5, 0.623817, -0.442503, -0.5, 0.089974, -0.442503, -0.452525, -8.66653e-05, -0.435001, -0.365211, 0.748878, -0.4275, 0.267522, 0.749291, -0.4275, 0.452428, -8.66653e-05, -0.435001, 0.5, 0.089974, -0.442503, 0.5, 0.623817, -0.442503, 0.5, 0.623817, -0.457501, 0.5, 0.089974, -0.457501, 0.452428, -8.66653e-05, -0.465003, 0.267522, 0.749291, -0.4725, -0.281617, -0.000334312, -0.465003, 0.344655, -0.000251763, -0.465003, -0.281617, -0.000334312, -0.435001, 0.344655, -0.000251763, -0.435001)
+
+[node name="iron-fence-damaged2" instance=ExtResource("1_lfp7i")]
+
+[node name="iron-fence-damaged" parent="." index="0"]
+transform = Transform3D(2.2, 0, 0, 0, 2.2, 0, 0, 0, 2.2, 0, 0, 0)
+surface_material_override/0 = ExtResource("2_1wgdi")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="iron-fence-damaged" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="iron-fence-damaged/StaticBody3D" index="0"]
+shape = SubResource("ConvexPolygonShape3D_gyovx")

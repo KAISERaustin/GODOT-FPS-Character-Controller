@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://dph87tvgn45b5"]
+
+[ext_resource type="PackedScene" uid="uid://bax2aovn72uf4" path="res://Models/kenney_graveyard-kit/Models/GLB format/gravestone-debris.glb" id="1_4wlya"]
+[ext_resource type="Material" uid="uid://bgddv4pokj7oc" path="res://Materials/GREY.tres" id="2_0xsio"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_xb6hh"]
+points = PackedVector3Array(-0.17891, 0.155378, -0.0699025, 0.303362, 0.17683, -0.42347, 0.303362, -0.00535873, -0.42347, -0.0716674, 0.17683, -0.605759, 0.1736, 0.250691, 0.0663967, -0.189865, -1.38778e-17, 0.0658688, -0.0824163, -0.00535873, -0.573598, 0.190141, -1.38778e-17, 0.0658688, 0.153271, 0.17683, -0.584273, -0.135964, 0.17683, 0.0694161, -0.200359, -0.00535873, -0.0806451, 0.14853, 0.00063359, -0.569295, 0.153271, 0.25186, -0.0699025, -0.170948, 0.1331, -0.253013, 0.303362, 0.17683, -0.466373, -0.177646, 0.00102269, -0.252718, -0.103816, 0.18753, -0.0699025, -0.00491799, 1.38778e-17, -0.591469, 0.282567, 0, -0.468186, -0.200359, 0.0910984, -0.0806451, -0.186868, 0.0928207, 0.0617878, -0.0824163, 0.17683, -0.573598, 0.153271, 0.25186, 0.0694161, 0.17472, 0.25186, -0.0699025, -0.00737102, 0.17683, -0.605759, -0.135964, 0.17683, -0.0699025, -0.0649735, 0.00163086, -0.58712, -0.103816, 0.18753, 0.0694161, 0.292613, 0.17683, -0.477116, -0.1615, 0.15295, 0.0443129, 0.0771597, 0, -0.581174, 0.292868, 1.38778e-17, -0.457891)
+
+[node name="gravestone-debris2" instance=ExtResource("1_4wlya")]
+
+[node name="gravestone-debris" parent="." index="0"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0.125, 0, 0)
+surface_material_override/0 = ExtResource("2_0xsio")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="gravestone-debris" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="gravestone-debris/StaticBody3D" index="0"]
+shape = SubResource("ConvexPolygonShape3D_xb6hh")

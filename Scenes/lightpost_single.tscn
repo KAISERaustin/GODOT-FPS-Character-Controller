@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://c0x12put4yq0t"]
+
+[ext_resource type="PackedScene" uid="uid://ce3x0mao3wjk4" path="res://Models/kenney_graveyard-kit/Models/GLB format/lightpost-single.glb" id="1_v2pyn"]
+[ext_resource type="Material" uid="uid://dch2hloj0uyxm" path="res://Materials/DARK GREEN.tres" id="2_8625l"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_egf41"]
+points = PackedVector3Array(0.0726233, 0.995221, 0.311267, -0.0732886, 0.995221, 0.311267, 0.0726233, 0.958562, 0.311267, 0.0726233, 0.995221, 0.165339, 0.0686528, 1.20253, 0.307268, -0.0732886, 0.995221, 0.165339, -0.0732886, 0.958562, 0.311267, -0.0693323, 1.20253, 0.307268, 0.0726233, 0.958562, 0.165339, 0.0646679, 0, 0.0646655, 0.0704952, 0.0469858, 0.0704951, 0.0704952, 0.0469858, -0.0705, 0.0686528, 1.20253, 0.1693, 0.0306751, 1.30089, 0.26448, -0.0705035, 0.0469858, -0.0705, -0.0732886, 0.958562, 0.165339, -0.0693323, 1.20253, 0.1693, -0.0705035, 0.0469858, 0.0704951, -0.0646762, 0, 0.0646655, -0.0313547, 1.30089, 0.26448, 0.0646679, 0, -0.0647077, 0.0309464, 1.2286, -0.0309631, 0.0221055, 1.31857, -0.0221439, 0.0306751, 1.30089, 0.212088, 0.0221055, 1.31857, 0.0221016, -0.0646762, 0, -0.0647077, -0.030969, 1.2286, -0.0309631, -0.0313547, 1.30089, 0.212088, -0.022128, 1.31857, -0.0221439, -0.022128, 1.31857, 0.0221016)
+
+[node name="lightpost-single2" instance=ExtResource("1_v2pyn")]
+
+[node name="lightpost-single" parent="." index="0"]
+transform = Transform3D(2.2, 0, 0, 0, 2.2, 0, 0, 0, 2.2, 0, 0, 0)
+surface_material_override/0 = ExtResource("2_8625l")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="lightpost-single" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="lightpost-single/StaticBody3D" index="0"]
+shape = SubResource("ConvexPolygonShape3D_egf41")

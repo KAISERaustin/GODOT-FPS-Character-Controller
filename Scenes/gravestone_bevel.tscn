@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://dd1pjc1li6nmj"]
+
+[ext_resource type="PackedScene" uid="uid://c6w4164phvugu" path="res://Models/kenney_graveyard-kit/Models/GLB format/gravestone-bevel.glb" id="1_ebmsf"]
+[ext_resource type="Material" uid="uid://bgddv4pokj7oc" path="res://Materials/GREY.tres" id="2_2g38u"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_m2tce"]
+points = PackedVector3Array(0.0228037, 0.565159, 0.0747, -0.214786, 0.00822263, -0.0997, -0.207204, 0.0181252, 0.0997, 0.217595, 0.00822263, -0.0997, 0.227422, 0.0876846, 0.107871, -0.0563257, 0.566155, -0.0737721, 0.191, 0.4405, -0.0731782, -0.183039, 0.436426, 0.0747, -0.18976, 0.44174, -0.0737984, 0.185848, 0.436426, 0.0747, -0.224613, 0.0877424, 0.107871, 0.210013, 0.0181252, 0.0997, 0.227422, 0.0876846, -0.104313, -0.224613, 0.0877424, -0.104313, 0.0505404, 0.5677, -0.0741958, -0.0543154, 0.556559, 0.0747, 0.0657253, 0.547959, 0.0747, -0.0208533, 0.57563, -0.0739221, 0.0680079, 0.557092, -0.073729, -0.0200357, 0.565159, 0.0747, -0.171982, 0.459518, -0.0738016, 0.0235633, 0.574906, -0.0737298, 0.168688, 0.453573, 0.0747, -0.165879, 0.453573, 0.0747, 0.173368, 0.458132, -0.0731813, 0.0485649, 0.556559, 0.0747)
+
+[node name="gravestone-bevel2" instance=ExtResource("1_ebmsf")]
+
+[node name="gravestone-bevel" parent="." index="0"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0.125, 0, 0)
+surface_material_override/0 = ExtResource("2_2g38u")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="gravestone-bevel" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="gravestone-bevel/StaticBody3D" index="0"]
+shape = SubResource("ConvexPolygonShape3D_m2tce")

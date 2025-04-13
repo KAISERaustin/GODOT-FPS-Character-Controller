@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://cdl6ddi82v8i1"]
+
+[ext_resource type="PackedScene" uid="uid://gbak4mqgf0u5" path="res://Models/kenney_graveyard-kit/Models/GLB format/altar-stone.glb" id="1_nokix"]
+[ext_resource type="Material" uid="uid://bgddv4pokj7oc" path="res://Materials/GREY.tres" id="2_ehgpv"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_vyh5d"]
+points = PackedVector3Array(0.478864, 0.482747, 0.271853, -0.502634, -2.77556e-17, -0.323804, -0.518993, -2.77556e-17, -0.307547, 0.502736, 2.77556e-17, 0.324937, -0.519967, 0.125869, 0.336122, 0.479926, 0.483279, -0.271321, -0.479926, 0.483279, -0.271321, 0.518993, -2.77556e-17, -0.307547, -0.478864, 0.482747, 0.271853, -0.502634, -2.77556e-17, 0.324937, 0.520072, 0.125869, -0.334989, 0.520072, 0.125869, 0.336122, -0.519967, 0.125869, -0.334989, -0.479853, 0.467222, -0.287378, 0.478791, 0.466726, 0.287874, 0.479853, 0.467222, -0.287378, -0.478791, 0.466726, 0.287874, 0.502736, 2.77556e-17, -0.323804, -0.518993, -2.77556e-17, 0.30868, 0.518993, -2.77556e-17, 0.30868)
+
+[node name="altar-stone2" instance=ExtResource("1_nokix")]
+
+[node name="altar-stone" parent="." index="0"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+surface_material_override/0 = ExtResource("2_ehgpv")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="altar-stone" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="altar-stone/StaticBody3D" index="0"]
+shape = SubResource("ConvexPolygonShape3D_vyh5d")

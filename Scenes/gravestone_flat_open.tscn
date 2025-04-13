@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://wb8nsyt73div"]
+
+[ext_resource type="PackedScene" uid="uid://del76016sdtw6" path="res://Models/kenney_graveyard-kit/Models/GLB format/gravestone-flat-open.glb" id="1_afeh4"]
+[ext_resource type="Material" uid="uid://bgddv4pokj7oc" path="res://Materials/GREY.tres" id="2_cyowu"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_vcy5k"]
+points = PackedVector3Array(-0.106277, 0.0902524, -0.525105, 0.221852, 0.0246143, 0.525105, 0.221852, -0.00820476, 0.525105, -0.221205, -0.00820476, 0.525105, 0.221852, -0.00820476, -0.525105, 0.024914, 0.123071, 0.525105, -0.221205, -0.00820476, -0.525105, 0.024914, 0.123071, -0.525105, -0.204725, 0.0410238, 0.525105, 0.205416, 0.0410238, -0.525105, -0.024223, 0.123071, 0.525105, -0.221205, 0.0246143, -0.525105, 0.106968, 0.0902524, 0.525105, -0.024223, 0.123071, -0.525105, -0.106277, 0.0902524, 0.525105, 0.106968, 0.0902524, -0.525105, 0.205416, 0.0410238, 0.525105, -0.204725, 0.0410238, -0.525105, -0.221205, 0.0246143, 0.525105, 0.221852, 0.0246143, -0.525105)
+
+[node name="gravestone-flat-open2" instance=ExtResource("1_afeh4")]
+
+[node name="lid" parent="gravestone-flat-open" index="0"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0.125, 0.254, 0)
+surface_material_override/0 = ExtResource("2_cyowu")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="gravestone-flat-open/lid" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="gravestone-flat-open/lid/StaticBody3D" index="0"]
+shape = SubResource("ConvexPolygonShape3D_vcy5k")

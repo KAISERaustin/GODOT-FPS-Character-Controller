@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://0e0ob0bhgx3e"]
+
+[ext_resource type="PackedScene" uid="uid://2qu6jxje7jex" path="res://Models/kenney_graveyard-kit/Models/GLB format/stone-wall-damaged.glb" id="1_sqs4d"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rr4gg"]
+albedo_color = Color(0.310617, 0.310617, 0.310617, 1)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_sqs4d"]
+points = PackedVector3Array(-0.507937, 0.198517, -0.476181, 0.507937, 0.658665, -0.412714, 0.507937, 0.658665, -0.492048, 0.507937, -0.0078713, -0.507937, 0.479105, 0.0110458, -0.4, -0.479105, 0.0110458, -0.4, -0.507937, -0.0078713, -0.507937, 0.285689, 0.658665, -0.412714, 0.285689, 0.658665, -0.492048, -0.507937, 0.103251, -0.396847, -0.460305, 0.246085, -0.428581, 0.507937, 0.103251, -0.396847, -0.507937, 0.103251, -0.507937, 0.507937, 0.103251, -0.507937, -0.460305, 0.246085, -0.476181, -0.507937, 0.198517, -0.428581)
+
+[node name="stone-wall-damaged2" instance=ExtResource("1_sqs4d")]
+
+[node name="stone-wall-damaged" parent="." index="0"]
+transform = Transform3D(2.2, 0, 0, 0, 2.2, 0, 0, 0, 2.2, 0, 0, 0.9)
+surface_material_override/0 = SubResource("StandardMaterial3D_rr4gg")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="stone-wall-damaged" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="stone-wall-damaged/StaticBody3D" index="0"]
+shape = SubResource("ConvexPolygonShape3D_sqs4d")

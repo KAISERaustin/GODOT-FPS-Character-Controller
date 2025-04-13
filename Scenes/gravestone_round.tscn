@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://bltogdieouyfj"]
+
+[ext_resource type="PackedScene" uid="uid://c8fxwhcxeqf2f" path="res://Models/kenney_graveyard-kit/Models/GLB format/gravestone-round.glb" id="1_svbxa"]
+[ext_resource type="Material" uid="uid://bgddv4pokj7oc" path="res://Materials/GREY.tres" id="2_nagoc"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_wb4xo"]
+points = PackedVector3Array(0.0398306, 0.576036, 0.0748, -0.187899, 0.0128362, -0.0748, 0.187899, 0.0128362, -0.0748, -0.190501, 0.0089639, 0.0748, -0.100461, 0.545938, -0.0748, 0.190501, 0.0089639, 0.0748, 0.187899, 0.406052, -0.0748, -0.190501, 0.40768, 0.0748, 0.190501, 0.407624, 0.0748, 0.100461, 0.545938, -0.0748, -0.187899, 0.406107, -0.0748, -0.101852, 0.549448, 0.0748, 0.145596, 0.504335, 0.0745108, -0.0393235, 0.572164, -0.0748, -0.144161, 0.502248, -0.0748, 0.144161, 0.502248, -0.0748, -0.145596, 0.504335, 0.0745107, -0.0398679, 0.576036, 0.0748, 0.0392867, 0.572164, -0.0748, 0.101852, 0.549448, 0.0748, -0.0664217, 0.567099, 0.0748, 0.0663844, 0.567099, 0.0748, 0.154863, 0.487175, 0.0747171, -0.154863, 0.487175, 0.0747171, -0.0655146, 0.563349, -0.0748, 0.0654778, 0.563349, -0.0748, 0.152916, 0.484728, -0.0748, -0.152916, 0.484728, -0.0748)
+
+[node name="gravestone-round2" instance=ExtResource("1_svbxa")]
+
+[node name="gravestone-round" parent="." index="0"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0.125, 0, 0)
+surface_material_override/0 = ExtResource("2_nagoc")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="gravestone-round" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="gravestone-round/StaticBody3D" index="0"]
+shape = SubResource("ConvexPolygonShape3D_wb4xo")

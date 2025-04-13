@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://bpusf6e120b0n"]
+
+[ext_resource type="PackedScene" uid="uid://clb8iugi1ccpx" path="res://Models/kenney_graveyard-kit/Models/GLB format/gravestone-broken.glb" id="1_7hvcf"]
+[ext_resource type="Material" uid="uid://bgddv4pokj7oc" path="res://Materials/GREY.tres" id="2_1hrxb"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_jop33"]
+points = PackedVector3Array(-0.192528, 0.000756793, -0.0748, -0.137056, 0.35901, 0.0680756, 0.125361, 0.042493, 0.222444, 0.1735, 0.313943, -0.0644535, 0.195, 0.00501433, -0.0712675, -0.198815, -0.00386032, 0.0757085, -0.168737, 0.353408, -0.0665, 0.28433, 0.00416753, 0.127227, 0.179431, 0.3204, 0.0680756, -0.175649, 0.35901, 0.0680756, 0.102196, -0.00386032, 0.222444, 0.29526, 0.042493, 0.129788, -0.137056, 0.35901, -0.0709095, -0.198815, 0.0888107, 0.0757085, 0.225714, 0.042493, 0.183808, 0.225714, -0.00386032, 0.183808, 0.29526, 0.042493, 0.114345, 0.102196, 0.042493, 0.222444, 0.24888, 0.042493, 0.168365, 0.284094, 0.00434041, 0.112427, 0.287522, 0.042493, 0.137509, -0.186674, 0.093173, -0.0712326)
+
+[node name="gravestone-broken2" instance=ExtResource("1_7hvcf")]
+
+[node name="gravestone-broken" parent="." index="0"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0.125, 0, 0)
+surface_material_override/0 = ExtResource("2_1hrxb")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="gravestone-broken" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="gravestone-broken/StaticBody3D" index="0"]
+shape = SubResource("ConvexPolygonShape3D_jop33")

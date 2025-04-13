@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://ds316dcbictkx"]
+
+[ext_resource type="PackedScene" uid="uid://ckns37wuqiijh" path="res://Models/kenney_graveyard-kit/Models/GLB format/cross.glb" id="1_angqo"]
+[ext_resource type="Material" uid="uid://bgddv4pokj7oc" path="res://Materials/GREY.tres" id="2_3nhan"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_4ic4a"]
+points = PackedVector3Array(0.0699771, 0.950613, -0.0521305, -0.275657, 0.699233, -0.0521305, -0.275657, 0.699233, 0.0421321, 0.101418, -0.00766033, -0.0521305, 0.274343, 0.699233, 0.0421321, -0.102786, -0.00766033, 0.0578448, -0.0399044, 0.746379, 0.0735714, 0.101418, -0.00766033, 0.0578448, 0.274343, 0.730631, -0.0521305, -0.102786, -0.00766033, -0.0521305, -0.00803974, 0.970373, 0.04, 0.0228158, 0.667737, -0.0678571, -0.00846352, 0.99766, -0.0521305, 0.0856976, 0.934865, 0.0421321, 0.0385363, 0.746379, 0.0735714, -0.0556248, 0.730631, -0.0678571, -0.275657, 0.730631, -0.0521305, 0.0542567, 0.730631, -0.0678571, 0.274343, 0.699233, -0.0521305, 0.0070954, 0.667737, 0.0735714, 0.0228158, 0.99766, -0.0521305, -0.0556248, 0.699233, -0.0678571, -0.0399044, 0.699233, 0.0735714, 0.0385363, 0.699233, 0.0735714, 0.0542567, 0.699233, -0.0678571, 0.021455, 0.968518, 0.0398551, -0.260728, 0.71784, 0.04, -0.0399044, 0.746379, -0.0678571, 0.0856976, 0.934865, -0.0521305, -0.024184, 0.667737, -0.0678571, 0.0385363, 0.746379, -0.0678571, -0.00846352, 0.667737, 0.0735714)
+
+[node name="cross2" instance=ExtResource("1_angqo")]
+
+[node name="cross" parent="." index="0"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+surface_material_override/0 = ExtResource("2_3nhan")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="cross" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="cross/StaticBody3D" index="0"]
+shape = SubResource("ConvexPolygonShape3D_4ic4a")

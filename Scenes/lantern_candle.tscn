@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://5suv2c0q461w"]
+
+[ext_resource type="PackedScene" uid="uid://nwukp6v1ru48" path="res://Models/kenney_graveyard-kit/Models/GLB format/lantern-candle.glb" id="1_mguuy"]
+[ext_resource type="Material" uid="uid://dch2hloj0uyxm" path="res://Materials/DARK GREEN.tres" id="2_my8be"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_hl01w"]
+points = PackedVector3Array(-0.072956, 0, -0.072956, -0.072956, 0, 0.072956, -0.072956, 0.0365947, -0.072956, 0.072956, 0, -0.072956, 0.072956, 0, 0.072956, -0.072956, 0.0365947, 0.072956, 0.072956, 0.0365947, -0.072956, -0.0689997, 0.243974, -0.0689997, 0.072956, 0.0365947, 0.072956, -0.0689997, 0.243974, 0.0689854, 0.0689854, 0.243974, -0.0689997, -0.016368, 0.2923, -0.0115404, -0.0476471, 0.262286, -0.0476471, 0.0689854, 0.243974, 0.0689854, -0.0476471, 0.262286, 0.0476328, -0.016368, 0.2923, 0.0115261, 0.0476328, 0.262286, -0.0476471, 0.0163537, 0.2923, -0.0115404, 0.0163537, 0.2923, 0.0115261, 0.0476328, 0.262286, 0.0476328)
+
+[node name="lantern-candle2" instance=ExtResource("1_mguuy")]
+
+[node name="lantern-candle" parent="." index="0"]
+transform = Transform3D(2.2, 0, 0, 0, 2.2, 0, 0, 0, 2.2, 0, 0, 0)
+surface_material_override/0 = ExtResource("2_my8be")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="lantern-candle" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="lantern-candle/StaticBody3D" index="0"]
+shape = SubResource("ConvexPolygonShape3D_hl01w")
